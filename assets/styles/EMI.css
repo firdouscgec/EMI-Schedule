@@ -125,7 +125,7 @@ body {
             padding: 5px;
             /* Reduce from 8px to 5px */
             text-align: left;
-            font-size: 10px;
+            font-size: 12px;
             /* Add this line */
         }
 
@@ -181,3 +181,4 @@ body {
             font-size: 14px;
             color: #333;
         }
+
