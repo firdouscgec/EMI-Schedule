@@ -1,95 +1,183 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-h1 {
-    text-align: center;
-}
+        h1 {
+            text-align: center;
+        }
 
-.form-container {
-    width: 50%;
-    /* Or any desired width */
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
+        .profile-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
 
-.radio-container {
-    margin-bottom: 20px;
-    text-align: center;
-}
+        .profile-section h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 1.2em;
+        }
 
-.radio-container label {
-    margin-right: 20px;
-}
+        .profile-form {
+            width: 60%;
+            margin: 0 auto;
+        }
 
-label {
-    display: inline-block;
-    width: 150px;
-    margin: 10px 0;
-}
+        .profile-form label {
+            display: inline-block;
+            width: 150px;
+            margin: 10px 0;
+        }
 
-input {
-    padding: 5px;
-    width: 200px;
-}
+        .profile-form input {
+            padding: 5px;
+            width: 250px;
+        }
 
-button {
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-}
+        .profile-display {
+            display: none;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
 
-button:hover {
-    background-color: #45a049;
-}
+        .profile-display h3 {
+            margin: 5px 0;
+            color: #333;
+        }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
+        .profile-display p {
+            margin: 3px 0;
+            color: #666;
+        }
 
-th,
-td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
+        .form-container {
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
 
-th {
-    background-color: #f2f2f2;
-}
+        .radio-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
 
-.error {
-    color: red;
-    margin-top: 10px;
-}
+ 
 
-.notice {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #333;
-    white-space: pre-line;
-    /* Preserve line breaks for bullet points */
-}
+        .radio-container select {
+            padding: 8px 12px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: white;
+        }
 
-@media print {
+        .radio-container label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
 
-    .form-container,
-    .error,
-    .radio-container {
-        display: none;
-    }
+        label {
+            display: inline-block;
+            width: 150px;
+            margin: 10px 0;
+        }
 
-    .notice {
-        display: block;
-    }
-}
+        input {
+            padding: 5px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 12px;
+            /* Add this line */
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 5px;
+            /* Reduce from 8px to 5px */
+            text-align: left;
+            font-size: 10px;
+            /* Add this line */
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-size: 11px;
+            /* Slightly larger for headers */
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+
+        .notice {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+            white-space: pre-line;
+            font-size: 10px;
+            /* Add this line - adjust the size as needed */
+        }
+
+        @media print {
+
+            .form-container,
+            .error,
+            .radio-container,
+            .profile-section {
+                display: none;
+            }
+
+            .notice {
+                display: block;
+            }
+
+            .profile-display {
+                display: block !important;
+            }
+        }
+
+        .signature-section {
+            margin-top: 10px;
+            padding: 10px;
+            border-top: 2px solid #333;
+        }
+
+        .signature-line {
+            margin: 20px 0;
+        }
+
+        .signature-line p {
+            font-size: 14px;
+            color: #333;
+        }
