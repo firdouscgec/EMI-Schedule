@@ -10,13 +10,40 @@
 </head>
 
 <body>
+    <!-- <h1>EMI Schedule</h1> -->
 
-    <h1>EMI Schedule</h1>
-    <div class="radio-container">
-        <label><input type="radio" name="loan-provider" value="TVS" checked> TVS</label>
-        <label><input type="radio" name="loan-provider" value="Bajaj"> Bajaj</label>
-        <label><input type="radio" name="loan-provider" value="Samsung"> Samsung</label>
+    <!-- Profile Section -->
+    <div class="profile-section">
+        <h2>Profile Information</h2>
+        <div class="profile-form">
+            <div>
+                <label for="shopName">Shop Name:</label>
+                <input type="text" id="shopName" placeholder="Enter shop name">
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <input type="text" id="address" placeholder="Enter address">
+            </div>
+            <div>
+                <label for="contact">Contact Number:</label>
+                <input type="text" id="contact" placeholder="Enter contact number">
+            </div>
+            <button onclick="saveProfile()">Save Profile</button>
+        </div>
     </div>
+
+    <!-- Profile Display for Print -->
+    <div id="profileDisplay" class="profile-display"></div>
+
+    <div class="radio-container">
+        <label for="loanProvider">Loan Provider:</label>
+        <select id="loanProvider" name="loan-provider">
+            <option value="TVS">TVS</option>
+            <option value="Bajaj">Bajaj</option>
+            <option value="Samsung">Samsung</option>
+        </select>
+    </div>
+
     <div class="form-container">
         <div>
             <label for="emi1">1st EMI Amount:</label>
@@ -37,7 +64,9 @@
         <button onclick="generate()">Generate</button>
         <button onclick="printSchedule()">Print</button>
     </div>
+
     <div id="error" class="error"></div>
+
     <table id="emiTable">
         <thead>
             <tr>
@@ -49,9 +78,10 @@
         </thead>
         <tbody id="emiTableBody"></tbody>
     </table>
+
     <div id="notice" class="notice"></div>
 
-<script src="assets/scripts/emi.js"></script>
+    <script src="assets/scripts/emi.js"></script>
 </body>
 
 </html>
